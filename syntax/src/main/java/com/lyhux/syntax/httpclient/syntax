@@ -1,0 +1,79 @@
+task {
+    url = "http://baidu.com"
+    method = "get"
+
+    param {
+       key : "value"
+       key2 : "value2"
+    }
+
+    header {
+       location : "http://google.com" // more header add
+    }
+
+    cookie {
+      file : @"input file"  // cookie save file
+
+      set-cookie : ""
+      set-cookie : ""
+
+    }
+
+    body {
+
+      form-data {
+          file1 : "file1 name"
+          file2 : "file2 name"
+          key1  : "value1"
+          key2  : "value2"
+      }
+
+      form-urlencoded {
+        key1  : "value1"
+        key2  : "value2"
+      }
+
+      raw {
+        text :"row string"
+        json :"json content"
+        xml : "xml content"
+        html : "html content"
+        octet : "binary content"
+        pdf : "pdf file"
+      }
+    }
+
+}
+
+task {
+    url = "http://bing.com"
+    method = "get"
+
+    param {
+       key : "value"
+       key2 : "value2"
+    }
+}
+
+
+
+taske {
+    url = "http://test.zeihaha.com/api/v1/history"
+    method = "post"
+
+    body {
+        raw {
+               text: "{
+                      	\"access_id\": 12345678922,
+                      	\"sign\": \"e5d137147c65d83507c7fc2cb63114de1cf0d473\",
+                      	\"time\": 1483928938,
+                      \"typ\":1,
+                      \"uid\":1,
+                      	\"appid\":1,
+                      	\"cids\":[1,2,3,4]
+
+                      }"
+        }
+    }
+    out = @"file"
+}

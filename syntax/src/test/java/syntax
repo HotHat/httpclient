@@ -1,0 +1,49 @@
+
+task {
+    url = "http://baidu.com"
+    method = "get"
+
+    param {
+       key : "value"
+       key2 : "value2"
+    }
+
+    header {
+       location : "http://google.com" // more header add
+    }
+
+    cookie {
+      from = "input file"  // cookie come from
+      to = "output file"   // cookie save to
+      data {
+          set-cookie : ""
+          set-cookie : ""
+      }
+    }
+
+    body {
+
+      form-data {
+
+      }
+
+      form-urlencoded {
+
+      }
+
+      raw = "row string"
+
+      binary = "binary content"
+    }
+
+}
+
+task {
+    url = "http://baidu.com"
+    method = "get"
+
+    param {
+       key : "value"
+       key2 : "value2"
+    }
+}

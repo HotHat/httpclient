@@ -1,0 +1,6 @@
+.gradle
+/build/
+.idea
+
+syntax/build/*
+syntax/out/*
