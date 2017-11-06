@@ -154,7 +154,6 @@ public class HttpClientBaseListener implements HttpClientListener {
 
 
 		String blockKeyWord = ctx.blockKeyword().getText();
-		System.out.println(blockKeyWord);
 
 
 		Token token = ctx.getStart();
